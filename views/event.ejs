@@ -1,0 +1,41 @@
+<%- include('partials/header') %>
+<div class="d-block m-4 p-4">
+    <a href="/eventSubmit" class=" btn btn-primary btn-lg">Create an Event</a>
+<a href="/logout" class="btn btn-secondary btn-lg">Logout</a>
+</div>
+
+
+<%usersWithEvents.map((user)=>{ %>
+    <%user.events.map((event1)=> { %>
+        
+        <div class="card d-inline-flex p-2 m-5" style="width: 18rem;">
+            <div class="card-body">
+                <h3 class="card-title"><%=event1.name%> </h3>
+              <h5 class="card-title"><%=event1.userCreated%></h5>
+              <p class="card-text"><%=event1.description%></p>
+              <p class="card-text"><%=event1.teamName%> </p>
+              <p class="card-text"><%=event1.applyDate%></p>
+              <p class="card-text"><%=event1.eventDate%></p>
+              <p class="card-text"><%=event1.venue%></p>
+              <p class="card-text"><%=event1.eventWebsite   %></p>
+                <% if(event1.noOfUserRequired === event1.noOfUserIn){ %>
+                    <p class="card-text">Team Completed</p>
+                <% } else { %>
+                    <p class="card-text"><%=event1.noOfUserRequired  %></p>
+                    <p class="card-text"><%=event1.noOfUserIn  %></p>
+                <button  class="btn btn-primary" onclick=`<%=joinTeam %>` >Join Team</button>
+                <% } %> 
+            </div>
+          </div>
+
+    <% }) %> 
+<% }) %> 
+<script>
+    
+function addUser()
+    
+</script>
+<script src="js/events.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

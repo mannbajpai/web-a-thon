@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Event Add in HTML CSS</title>
+   
+    <link rel="stylesheet" href="css/eventSubmit.css" />
+  </head>
+  <body>
+    <section class="container">
+      <header>Fill The Form to Add Your Competition</header>
+      <form action="" class="form" method="post">
+        <div class="input-box">
+          <label>Competition Name</label>
+          <input name = "name" type="text" placeholder="Please Enter Competition Name" required />
+        </div>
+
+        <div class="input-box">
+          <label>Competition Description </label>
+          <input name="description" type="text" placeholder="Please Enter Competition Description" required />
+        </div>
+
+        <div class="column">
+          <div class="input-box">
+            <label>Team name</label>
+            <input  name="teamName" type="text" placeholder="Enter Team Name" required />
+          </div>
+          <div class="input-box">
+            <label>Competition Website </label>
+            <input  name="website" type="text" placeholder="Enter the URL" required />
+          </div>
+          <div class="input-box">
+            <label>Last Date to apply</label>
+            <input name="lastDate" type="date" placeholder="Enter Last Date to apply" required />
+          </div>
+        </div>
+        <div class="input-box">
+          <label>Competition Date </label>
+              <input type="date" name="date"/>
+            </div>
+
+
+           
+          </div>
+        </div>
+        <div class="input-box ">
+        
+          <label>Competition Address</label>
+          <input class="input-box " name="venue" type="text" placeholder="Enter address" required />
+          </div>
+
+          
+          
+          <div class="input-box " >
+            <label>No. Of Participants In</label>
+            
+            <input name = "partipicantsReq" type="number" placeholder="Enter No. Of Participants In" required />
+          </div>
+         
+         
+          <div class="input-box " >
+            <label>Total No. of Participants required</label>
+            <input name="participantsinTeam" type="number" placeholder="Enter the total No. of Participants required" required />
+            
+          </div>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </body>
+</html>
